@@ -85,7 +85,7 @@ Client → Routes → Middleware (Auth + RBAC) → Controllers → Services → 
 
 ### Installation
 
-```bash
+
 # Clone the repository
 git clone <repository-url>
 cd finance-backend
@@ -93,8 +93,19 @@ cd finance-backend
 # Install dependencies
 npm install
 
-# Create environment file
-cp .env.example .env
+# Create environment file .env
+
+NODE_ENV=development
+PORT=5000
+
+MONGODB_URI=mongodb://localhost:27017/finance_dashboard
+
+JWT_SECRET=your_super_secret_key_change_this_in_production
+JWT_EXPIRES_IN=7d
+
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX=100
+
 # Edit .env with your MongoDB URI and JWT secret
 
 # Seed the database with sample data
