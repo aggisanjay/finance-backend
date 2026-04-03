@@ -93,6 +93,7 @@ cd finance-backend
 # Install dependencies
 npm install
 
+```bash
 # Create environment file .env
 
 NODE_ENV=development
